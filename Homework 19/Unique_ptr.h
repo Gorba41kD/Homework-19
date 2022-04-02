@@ -29,6 +29,14 @@ public:
 	}
 	Unique_ptr(const Unique_ptr&) = delete;
 	Unique_ptr& operator =(const Unique_ptr&) = delete;
+	T* operator ->()
+	{
+		return m_pointer;
+	}
+	T& operator *()
+	{
+		return *m_pointer;
+	}
 	~Unique_ptr()
 	{
 		delete m_pointer;
