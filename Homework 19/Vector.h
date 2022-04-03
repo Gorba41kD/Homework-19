@@ -61,6 +61,10 @@ public:
 	{
 		return elem[i];
 	}
+	T& operator[](int i) const
+	{
+		return elem[i];
+	}
 	~Vector()
 	{
 		delete[] elem;

@@ -23,13 +23,13 @@ public:
 };
 
 template<typename T>
-void foo(Vector<T>& vec1, Vector<T>& vec2)
+void foo(Vector<T>& vec1,const Vector<T>& vec2)
 {
-	for (int i = 0; i < vec1.Size(); i++)
+	int min_size = std::min(vec1.Size(), vec2.Size());
+	for (int i = 0; i < min_size; i++)
 	{
 		vec1[i] += vec2[i];
 	}
-
 }
 int main()
 {
